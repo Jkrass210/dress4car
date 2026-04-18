@@ -1,0 +1,24 @@
+.list-products {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  @media (max-width: 1000px) {
+    gap: 28px;
+  }
+  &__box-swiper {
+    position: relative;
+    .link-all {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(100% + 40px);
+      right: 0;
+      @media (max-width: 1000px) {
+        bottom: 0;
+        width: 180px;
+        height: 48px;
+        border-radius: 16px;
+        background-color: var(--gray-10, #F6F6F6);
+      }
+    }
+  }
+}

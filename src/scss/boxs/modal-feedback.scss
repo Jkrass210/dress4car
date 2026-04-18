@@ -1,0 +1,9 @@
+.modal-feedback {
+  &__window {
+    width: 400px;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 24px;
+    background-color: var(--white);
+  }
+}

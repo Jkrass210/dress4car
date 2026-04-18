@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link href="css/normalize.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/style.css?_v=20260407155407" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260407155407"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260407155407" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260407155407" defer></script>
+  <script src="js/fslightbox.js?_v=20260407155407" defer></script>
+  <script type="module" src="js/main.js?_v=20260407155407"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top_line">
+        <a href="#" class="link-write">
+          <span class="svg">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+              <use xlink:href="img/sprite.svg#linkWrite"></use>
+            </svg>
+          </span>
+          <span class="text">
+            Написать директору
+          </span>
+        </a>
+
+        <ul class="network-list list-reset">
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/w.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/tg.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/vk.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/avito.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/drive.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle_line">
+        <a href="/" class="logo">
+  <img src="img/logo/logo.svg" alt="logo">
+</a>
+        <div class="header__middle_right">
+          <div class="box-order drop-down-tipe-1">
+            <button class="box-order__btn btn-reset drop-down-tipe-1__btn">
+              <span class="svg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                </svg>
+              </span>
+            </button>
+
+            <div class="box-order__box drop-down-tipe-1__box drop-down-tipe-1__group-elem">
+              <a href="tel:+7 904 055-52-02" class="link-phone">
+                <span class="svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  +7 904 055-52-02
+                </span>
+              </a>
+
+              <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal" data-modal="modal-feedback">
+                <span class="text">Заказать звонок</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="group-btn">
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Избранное
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Корзина
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#lk"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Личный кабинет
+              </span>
+            </a>
+          </div>
+
+          <button class="burger btn-reset">
+            <span class="svg">
+              <svg width="23" height="18" viewBox="0 0 23 18" fill="none">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom_line">
+        <button class="header__bottom_line__close btn-reset js-close mobile">
+          <span class="svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#bottomLineClose"></use>
+            </svg>
+          </span>
+        </button>
+        <nav class="header__nav">
+          <ul class="list-nav list-reset">
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#cataloc"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#stocks"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Акции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Установка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Инструкции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Вопрос-ответ
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Оплата и доставка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Контакты
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <use xlink:href="img/sprite.svg#linkWrite"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Написать директору
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__bottom_line__order-group mobile">
+          <a href="tel:+7 904 055-52-02" class="link-phone">
+            <span class="svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#phoneBtn"></use>
+              </svg>
+            </span>
+            <span class="text">
+              +7 904 055-52-02
+            </span>
+          </a>
+
+          <button class="btn-order btn-reset">
+            <span class="text">Заказать звонок</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section>
+  <div class="container">
+    <div class="hero">
+      <div class="hero__box-img">
+        <button class="swiper-btn-type-1 --prev btn-reset">
+          <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+            <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+          </svg>
+        </button>
+        <div class="swiper-hero swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="card-hero">
+                <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="Чехлы, созданные точно под ваш автомобиль"></picture>
+                <div class="card-hero__content">
+                  <div class="card-hero__top">
+                    <h1 class="card-hero__title">
+                      Чехлы, созданные точно под ваш автомобиль
+                    </h1>
+                    <p class="card-hero__desc">Индивидуальный дизайн, качественные материалы и посадка «как с завода»
+                    </p>
+                  </div>
+                  <a href="#" class="btn-order">
+                    <span class="text">Подбрать чехлы</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-hero">
+                <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt=""></picture>
+                <div class="card-hero__content">
+                  <div class="card-hero__top">
+                    
+                    <p class="card-hero__desc">Индивидуальный дизайн, качественные материалы и посадка «как с завода»
+                    </p>
+                  </div>
+                  <a href="#" class="btn-order">
+                    <span class="text">Подбрать чехлы</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-hero">
+                <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt=""></picture>
+                <div class="card-hero__content">
+                  <div class="card-hero__top">
+                    <h2 class="card-hero__title">
+                      Чехлы, созданные точно под ваш автомобиль Чехлы, созданные точно под ваш автомобиль
+                    </h2>
+                    <p class="card-hero__desc">Индивидуальный дизайн, качественные материалы и посадка «как с завода» Индивидуальный дизайн, качественные материалы и посадка «как с завода»
+                    </p>
+                  </div>
+                  <a href="#" class="btn-order">
+                    <span class="text">Подбрать чехлы</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+          </div>
+          <div class="swiper-hero-pagination"></div>
+        </div>
+        <button class="swiper-btn-type-1 --next btn-reset">
+          <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+            <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="advantage">
+      <ul class="advantage__list list-reset">
+        <li>
+          <article class="card-advantage">
+            <div class="card-advantage__bpx-img">
+              <img src="img/card-advantage/1.svg" alt="svg">
+            </div>
+            <div class="card-advantage__info">
+              <h3 class="card-advantage__title">Выглядит как с завода</h3>
+              <p class="card-advantage__desc">Индивидуальный дизайн, качественные материалы и посадка «как с завода»</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-advantage">
+            <div class="card-advantage__bpx-img">
+              <img src="img/card-advantage/2.svg" alt="svg">
+            </div>
+            <div class="card-advantage__info">
+              <h3 class="card-advantage__title">Доступно</h3>
+              <p class="card-advantage__desc">Цена значительно ниже, чем индивидуальная перетяжка.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-advantage">
+            <div class="card-advantage__bpx-img">
+              <img src="img/card-advantage/3.svg" alt="svg">
+            </div>
+            <div class="card-advantage__info">
+              <h3 class="card-advantage__title">Качественно</h3>
+              <p class="card-advantage__desc">Используем прочные и проверенные материалы.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-advantage">
+            <div class="card-advantage__bpx-img">
+              <img src="img/card-advantage/4.svg" alt="svg">
+            </div>
+            <div class="card-advantage__info">
+              <h3 class="card-advantage__title">С гарантией</h3>
+              <p class="card-advantage__desc">Гарантия на наши изделия составляет 1 год.</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="list-products">
+      <div class="section-title">
+  <h2 class="section-title__text">
+    Популярные товары
+  </h2>
+</div>
+
+      <div class="list-products__box-swiper">
+
+        <a href="#" class="link-all">
+          <span class="text">Смотреть все</span>
+          <span class="svg">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+              <use xlink:href="img/sprite.svg#linkAll"></use>
+            </svg>
+          </span>
+        </a>
+
+        <div class="swiper-products swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="card-products">
+                <a href="#" class="card-products__link">
+                  <span class="text">Авточехлы на Chery Tiggo</span>
+                </a>
+                <span class="card-products__hover"></span>
+                <div class="card-products__top">
+                  <div class="swiper-card-products swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-products/1.webp" type="image/webp"><img src="img/card-products/1.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-card-products-pagination"></div>
+                  </div>
+
+                  <div class="card-products__info">
+                    <h3 class="card-products__title">Авточехлы на Chery Tiggo</h3>
+                    <div class="card-products__group-price">
+                      <span class="price">
+                        <span class="actual">6 000 ₽</span>
+                      </span>
+                      <!--класс stock добавляет "В наличии" класс none добавляет "Нет в наличии"-->
+                      <span class="available stock">
+                        Доступность: <i class="stock">В наличии</i><i class="none">Нет в наличии</i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-products__bottom">
+                  <span class="card-products__detail">
+                    <span class="text">Подробнее</span>
+                  </span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-products">
+                <a href="#" class="card-products__link">
+                  <span class="text">Авточехлы на Chery ыкцукецу уцкецу Tiggo</span>
+                </a>
+                <span class="card-products__hover"></span>
+                <div class="card-products__top">
+                  <div class="swiper-card-products swiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-card-products-pagination"></div>
+                  </div>
+
+                  <div class="card-products__info">
+                    <h3 class="card-products__title">Авточехлы на Chery ыкцукецу уцкецу Tiggo</h3>
+                    <div class="card-products__group-price">
+                      <span class="price">
+                        <span class="actual">6 000 ₽</span>
+                      </span>
+                      <!--класс stock добавляет "В наличии" класс none добавляет "Нет в наличии"-->
+                      <span class="available none">
+                        Доступность: <i class="stock">В наличии</i><i class="none">Нет в наличии</i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-products__bottom">
+                  <span class="card-products__detail">
+                    <span class="text">Подробнее</span>
+                  </span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-products">
+                <a href="#" class="card-products__link">
+                  <span class="text">Авточехлы Tiggo</span>
+                </a>
+                <span class="card-products__hover"></span>
+                <div class="card-products__top">
+                  <div class="swiper-card-products swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-card-products-pagination"></div>
+                  </div>
+
+                  <div class="card-products__info">
+                    <h3 class="card-products__title">Авточехлы Tiggo</h3>
+                    <div class="card-products__group-price">
+                      <span class="price">
+                        <span class="actual">6 000 ₽</span>
+                      </span>
+                      <!--класс stock добавляет "В наличии" класс none добавляет "Нет в наличии"-->
+                      <span class="available stock">
+                        Доступность: <i class="stock">В наличии</i><i class="none">Нет в наличии</i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-products__bottom">
+                  <span class="card-products__detail">
+                    <span class="text">Подробнее</span>
+                  </span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-products">
+                <a href="#" class="card-products__link">
+                  <span class="text">Авточехлы на Chery ыкцукецу уцкецу Tiggo</span>
+                </a>
+                <span class="card-products__hover"></span>
+                <div class="card-products__top">
+                  <div class="swiper-card-products swiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="swiper-card-products-pagination"></div>
+                  </div>
+
+                  <div class="card-products__info">
+                    <h3 class="card-products__title">Авточехлы на Chery ыкцукецу ыкцукецу ыкцукецу уцкецу Tiggo</h3>
+                    <div class="card-products__group-price">
+                      <span class="price">
+                        <span class="actual">6 000 ₽</span>
+                      </span>
+                      <!--класс stock добавляет "В наличии" класс none добавляет "Нет в наличии"-->
+                      <span class="available none">
+                        Доступность: <i class="stock">В наличии</i><i class="none">Нет в наличии</i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-products__bottom">
+                  <span class="card-products__detail">
+                    <span class="text">Подробнее</span>
+                  </span>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-products">
+                <a href="#" class="card-products__link">
+                  <span class="text">Авточехлы на Chery ыкцукецу уцкецу Tiggo</span>
+                </a>
+                <span class="card-products__hover"></span>
+                <div class="card-products__top">
+                  <div class="swiper-card-products swiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/2.webp" type="image/webp"><img src="img/card-hero/2.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-products__img">
+                          <picture><source srcset="img/card-hero/3.webp" type="image/webp"><img src="img/card-hero/3.jpg" alt="img"></picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-card-products-pagination"></div>
+                  </div>
+
+                  <div class="card-products__info">
+                    <h3 class="card-products__title">Авточехлы на Chery ыкцукецу уцкецу Tiggo</h3>
+                    <div class="card-products__group-price">
+                      <span class="price">
+                        <span class="actual">6 000 ₽</span>
+                      </span>
+                      <!--класс stock добавляет "В наличии" класс none добавляет "Нет в наличии"-->
+                      <span class="available none">
+                        Доступность: <i class="stock">В наличии</i><i class="none">Нет в наличии</i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-products__bottom">
+                  <span class="card-products__detail">
+                    <span class="text">Подробнее</span>
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-nav">
+            <div class="swiper-nav__group">
+              <button class="swiper-btn-type-1 --prev btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                </svg>
+              </button>
+
+              <button class="swiper-btn-type-1 --next btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="section-catalog">
+      <div class="section-title">
+  <h2 class="section-title__text">
+    Каталог брендов
+  </h2>
+</div>
+
+      <div class="section-catalog__list">
+        <!--только png-->
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/BMW.webp" type="image/webp"><img src="img/card-catalog/BMW.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">BMW</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/AUDI.webp" type="image/webp"><img src="img/card-catalog/AUDI.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">AUDI</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/CHERY.webp" type="image/webp"><img src="img/card-catalog/CHERY.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">CHERY</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/Chevrolet.webp" type="image/webp"><img src="img/card-catalog/Chevrolet.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">Chevrolet</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/FORD.webp" type="image/webp"><img src="img/card-catalog/FORD.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">FORD</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/GEELY.webp" type="image/webp"><img src="img/card-catalog/GEELY.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">GEELY</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/HYUNDAI.webp" type="image/webp"><img src="img/card-catalog/HYUNDAI.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">HYUNDAI</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/kia.webp" type="image/webp"><img src="img/card-catalog/kia.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">kia</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/TOYOTA.webp" type="image/webp"><img src="img/card-catalog/TOYOTA.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">TOYOTA</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/BMW.webp" type="image/webp"><img src="img/card-catalog/BMW.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">BMW</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/HYUNDAI.webp" type="image/webp"><img src="img/card-catalog/HYUNDAI.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">HYUNDAI</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/kia.webp" type="image/webp"><img src="img/card-catalog/kia.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">kia</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/TOYOTA.webp" type="image/webp"><img src="img/card-catalog/TOYOTA.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">TOYOTA</h3>
+        </article>
+
+        <article class="card-catalog">
+          <a href="#" class="card-catalog__link">
+            <picture><source srcset="img/card-catalog/BMW.webp" type="image/webp"><img src="img/card-catalog/BMW.jpg" alt="img"></picture>
+          </a>
+          <h3 class="card-catalog__title">BMW</h3>
+        </article>
+
+        <a href="#" class="link-catalog-all">
+          <span class="text">Показать<br>все бренды</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="our-work">
+      <div class="section-title">
+        <h2 class="section-title__text">Наши работы</h2>
+      </div>
+
+      <div class="our-work__content">
+
+        <a href="#" class="link-all">
+          <span class="text">Смотреть все</span>
+          <span class="svg">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+              <use xlink:href="img/sprite.svg#linkAll"></use>
+            </svg>
+          </span>
+        </a>
+
+        <div class="our-work__box-top-swiper">
+          <div class="our-work__info js-box-desc">
+            <div class="our-work__info-top">
+              <h3 class="our-work__title js-data-title">
+                Сделали новый салон для BMW 520i
+              </h3>
+              <p class="our-work__desc js-data-desc">
+                В своём стремлении повысить качество жизни, они забывают, что экономическая повестка сегодняшнего
+                дня создаёт необходимость включения в производственный некоторых мероприятий
+              </p>
+            </div>
+
+            <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal" data-modal="modal-feedback">
+              <span class="text">Отправить сообщение</span>
+            </button>
+          </div>
+
+          <div class="our-work__top-swiper">
+
+            <div class="swiper-gallery swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <article class="card-gallery">
+                    <div class="card-gallery__top">
+                      <div class="swiper-gallery-item swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery-preview/1.webp" type="image/webp"><img src="img/swiper-gallery-preview/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery/1.webp" type="image/webp"><img src="img/swiper-gallery/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="swiper-nav">
+                          <div class="swiper-nav__group">
+                            <button class="swiper-btn-type-1 --prev btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                              </svg>
+                            </button>
+                            <button class="swiper-btn-type-1 --next btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-gallery__bottom">
+                      <div class="card-gallery__bottom_top">
+                        <h3 class="our-work__title">
+                          Сделали новый салон для BMW 520i
+                        </h3>
+
+                        <p class="our-work__desc">
+                          В своём стремлении повысить качество жизни, они забывают, что экономическая повестка
+                          сегодняшнего дня создаёт необходимость включения в производственный некоторых мероприятий
+                        </p>
+                      </div>
+
+                      <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal"
+                        data-modal="modal-feedback">
+                        <span class="text">Отправить сообщение</span>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="card-gallery">
+                    <div class="card-gallery__top">
+                      <div class="swiper-gallery-item swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery-preview/2.webp" type="image/webp"><img src="img/swiper-gallery-preview/2.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery/1.webp" type="image/webp"><img src="img/swiper-gallery/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="swiper-nav">
+                          <div class="swiper-nav__group">
+                            <button class="swiper-btn-type-1 --prev btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                              </svg>
+                            </button>
+                            <button class="swiper-btn-type-1 --next btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-gallery__bottom">
+                      <div class="card-gallery__bottom_top">
+                        <h3 class="our-work__title">
+                          2222
+                        </h3>
+
+                        <p class="our-work__desc">
+                          В своём стремлении повысить качество жизни, В своём стремлении повысить качество жизни В своём стремлении повысить качество жизниони забывают, что экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный некоторых мероприятий
+                        </p>
+                      </div>
+
+                      <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal"
+                        data-modal="modal-feedback">
+                        <span class="text">Отправить сообщение</span>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="card-gallery">
+                    <div class="card-gallery__top">
+                      <div class="swiper-gallery-item swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery-preview/3.webp" type="image/webp"><img src="img/swiper-gallery-preview/3.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/swiper-gallery-preview/2.webp" type="image/webp"><img src="img/swiper-gallery-preview/2.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="card-img">
+                              <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="img"></picture>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="swiper-nav">
+                          <div class="swiper-nav__group">
+                            <button class="swiper-btn-type-1 --prev btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                              </svg>
+                            </button>
+                            <button class="swiper-btn-type-1 --next btn-reset">
+                              <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                                <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-gallery__bottom">
+                      <div class="card-gallery__bottom_top">
+                        <h3 class="our-work__title">
+                          3333 В своём стремлении повысить повысить повысить качество жизни
+                        </h3>
+
+                        <p class="our-work__desc">
+                          В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни
+                        </p>
+                      </div>
+
+                      <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal"
+                        data-modal="modal-feedback">
+                        <span class="text">Отправить сообщение</span>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+
+              </div>
+              <div class="swiper-nav swiper-gallery__swiper-nav">
+                <div class="swiper-nav__group">
+                  <button class="swiper-btn-type-1 --prev btn-reset">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                      <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                    </svg>
+                  </button>
+                  <button class="swiper-btn-type-1 --next btn-reset">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                      <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="our-work__box-bottom-swiper js-box-desc-preview">
+          <div class="swiper-gallery-preview swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="card-gallery-preview js-desc-preview" data-title="Сделали новый салон для BMW 520i"
+                  data-desc="В своём стремлении повысить качество жизни, они забывают, что экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный некоторых мероприятий">
+                  <div class="card-gallery-preview__top">
+                    <span class="tag">8 фото</span>
+                    <picture><source srcset="img/swiper-gallery-preview/1.webp" type="image/webp"><img src="img/swiper-gallery-preview/1.jpg" alt="img"></picture>
+                  </div>
+                  <h4 class="card-gallery-preview__name">
+                    Краткая подпись для альбома с фотографиями про марку авто и тип работ
+                  </h4>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card-gallery-preview js-desc-preview" data-title="2222"
+                  data-desc="В своём стремлении повысить качество жизни, В своём стремлении повысить качество жизни В своём стремлении повысить качество жизниони забывают, что экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный некоторых мероприятий">
+                  <div class="card-gallery-preview__top">
+                    <span class="tag">12 фото</span>
+                    <picture><source srcset="img/swiper-gallery-preview/2.webp" type="image/webp"><img src="img/swiper-gallery-preview/2.jpg" alt="img"></picture>
+                  </div>
+                  <h4 class="card-gallery-preview__name">
+                    Краткая подпись для альбома с фотографиями про марку авто и тип работ
+                  </h4>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card-gallery-preview js-desc-preview"
+                  data-title="3333 В своём стремлении повысить повысить повысить качество жизни"
+                  data-desc="В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни В своём стремлении повысить качество жизни">
+                  <div class="card-gallery-preview__top">
+                    <span class="tag">10 фото</span>
+                    <picture><source srcset="img/swiper-gallery-preview/3.webp" type="image/webp"><img src="img/swiper-gallery-preview/3.jpg" alt="img"></picture>
+                  </div>
+                  <h4 class="card-gallery-preview__name">
+                    Краткая подпись для альбома с фотографиями про марку авто и тип работ
+                  </h4>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-156">
+      <div class="container">
+        <div class="section-info">
+          <h2 class="section-info__title">
+            За годы работы мы произвели <span>тысячи комплектов чехлов</span>
+          </h2>
+          <p class="section-info__desc">
+            Опыт, собственное производство и отработанные технологии позволяют достигать идеальной посадки под любой автомобиль.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="background-gray-10 mt-156">
+  <div class="container">
+    <div class="write-us selection-covers">
+      <div class="write-us__box-img">
+        <picture><source srcset="img/write-us/2.webp" type="image/webp"><img src="img/write-us/2.jpg" alt="img"></picture>
+      </div>
+
+      <div class="write-us__wrapper">
+        <div class="section-title padding-none">
+          <h2 class="section-title__text">Подберём чехлы<br>под ваш автомобиль</h2>
+        </div>
+        <form class="js-form">
+          <div class="form-type-1">
+            <p class="form-type-1__desc">Если вы не знаете, с чего начать — заполните анкету. Мы предложим варианты
+              дизайна под вашу модель.</p>
+
+            <div class="drop-down-type-1">
+              <label class="drop-down-type-1__label">
+                <input class="drop-down-type-1__input required" type="text" placeholder="Выберите бренд">
+                <span class="message-error">Это поле не может быть пустым</span>
+              </label>
+
+              <button class="drop-down-type-1__btn btn-reset">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <use xlink:href="img/sprite.svg#dropDownBtn"></use>
+                </svg>
+              </button>
+
+              <div class="drop-down-type-1__choice">
+
+                <div class="min-search">
+                  <!--<form>-->
+                    <div class="min-search__line">
+                      <input class="min-search__input" type="text" placeholder="Начните вводить название">
+
+                      <button class="min-search__subnit btn-reset" type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <use xlink:href="img/sprite.svg#minSearch"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  <!--</form>-->
+                </div>
+
+                <div class="drop-down-type-1__list">
+                  <span class="drop-down-type-1__item">Chery</span>
+                  <span class="drop-down-type-1__item">Chevrolet</span>
+                  <span class="drop-down-type-1__item">Daewoo</span>
+                  <span class="drop-down-type-1__item">Datsun</span>
+                  <span class="drop-down-type-1__item">Ford</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="drop-down-type-1">
+              <label class="drop-down-type-1__label">
+                <input class="drop-down-type-1__input required" type="text" placeholder="Выберите модель">
+                <span class="message-error">Это поле не может быть пустым</span>
+              </label>
+
+              <button class="drop-down-type-1__btn btn-reset">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <use xlink:href="img/sprite.svg#dropDownBtn"></use>
+                </svg>
+              </button>
+
+              <div class="drop-down-type-1__choice">
+
+                <div class="min-search">
+                  <!--<form>-->
+                    <div class="min-search__line">
+                      <input class="min-search__input" type="text" placeholder="Начните вводить название">
+
+                      <button class="min-search__subnit btn-reset" type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <use xlink:href="img/sprite.svg#minSearch"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  <!--</form>-->
+                </div>
+
+                <div class="drop-down-type-1__list">
+                  <span class="drop-down-type-1__item">afaw</span>
+                  <span class="drop-down-type-1__item">Cheasd vrolet</span>
+                  <span class="drop-down-type-1__item">asfasf</span>
+                  <span class="drop-down-type-1__item">sdfsdf-sdf</span>
+                  <span class="drop-down-type-1__item">afaf</span>
+                  <span class="drop-down-type-1__item">asfasf</span>
+                  <span class="drop-down-type-1__item">sdfsdf-sdf</span>
+                  <span class="drop-down-type-1__item">afaf</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="drop-down-type-1">
+              <label class="drop-down-type-1__label">
+                <input class="drop-down-type-1__input required" type="text" placeholder="Выберите диапазон цен">
+                <span class="message-error">Это поле не может быть пустым</span>
+              </label>
+
+              <button class="drop-down-type-1__btn btn-reset">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <use xlink:href="img/sprite.svg#dropDownBtn"></use>
+                </svg>
+              </button>
+
+              <div class="drop-down-type-1__choice">
+
+                <div class="min-search">
+                  <!--<form>-->
+                    <div class="min-search__line">
+                      <input class="min-search__input" type="text" placeholder="Начните вводить название">
+
+                      <button class="min-search__subnit btn-reset" type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <use xlink:href="img/sprite.svg#minSearch"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  <!--</form>-->
+                </div>
+
+                <div class="drop-down-type-1__list">
+                  <span class="drop-down-type-1__item">10-20</span>
+                  <span class="drop-down-type-1__item">50-60</span>
+                  <span class="drop-down-type-1__item">100-120</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <button class="btn-reset btn-submit-type-1 btn-order">
+              <span class="text">Отправить сообщение</span>
+            </button>
+
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных
+                  данных</a>
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-156 overflow-hidden">
+  <div class="container">
+    <div class="list-reviews">
+      <div class="section-title">
+        <h2 class="section-title__text">Нас выбирают владельцы<br>автомобилей по всей России</h2>
+      </div>
+
+      <div class="list-reviews__box-swiper">
+
+        <div class="swiper-reviews swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+                      <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="Алексей Б."></picture>
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Есть инструкция
+                    на сайте подробная для выполнения работ. Также есть тех поддержка по телефону. Подсказали ответы
+                    на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Sxvxf Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Хорошая консультация. Есть инструкция на сайте подробная для выполнения
+                    работ. Также есть тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+                      <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="Алексей Б."></picture>
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Есть инструкция
+                    на сайте подробная для выполнения работ. Также есть тех поддержка по телефону. Подсказали ответы
+                    на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide js-open-modal" data-modal="modal-reviews">
+              <article class="card-reviews">
+                <div class="card-reviews__top">
+                  <div class="card-reviews__person">
+                    <div class="card-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-reviews__person_info">
+                      <h3 class="name">Sxvxf Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-reviews__estimation">
+                    <span class="card-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Хорошая консультация. Есть инструкция на сайте подробная для выполнения
+                    работ. Также есть тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="swiper-nav">
+            <div class="swiper-nav__group">
+              <button class="swiper-btn-type-1 --prev btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                </svg>
+              </button>
+
+              <button class="swiper-btn-type-1 --next btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a href="#" class="link-reviews">
+              <span class="text">Оставить отзыв</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-reviews">
+    <div class="modal__body">
+      <button class="modal-reviews__close modal__close btn-reset js-close-modal">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+          <use xlink:href="img/sprite.svg#modalClose"></use>
+        </svg>
+      </button>
+
+      <div class="modal-reviews__window">
+        <div class="swiper-modal-reviews swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+                      <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="Алексей Б."></picture>
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Есть инструкция
+                    на сайте подробная для выполнения работ. Также есть тех поддержка по телефону. Подсказали ответы
+                    на вопросы
+                  </div>
+
+                  <button class="card-modal-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Sxvxf Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Хорошая консультация. Есть инструкция на сайте подробная для выполнения
+                    работ. Также есть тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-modal-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+                      <picture><source srcset="img/card-hero/1.webp" type="image/webp"><img src="img/card-hero/1.jpg" alt="Алексей Б."></picture>
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Есть инструкция
+                    на сайте подробная для выполнения работ. Также есть тех поддержка по телефону. Подсказали ответы
+                    на вопросы
+                  </div>
+
+                  <button class="card-modal-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Алексей Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-modal-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card-modal-reviews">
+                <div class="card-modal-reviews__top">
+                  <div class="card-modal-reviews__person">
+                    <div class="card-modal-reviews__person_avatar">
+
+                    </div>
+                    <div class="card-modal-reviews__person_info">
+                      <h3 class="name">Sxvxf Б.</h3>
+                      <span class="time"><time datetime="13 декабря 2026 года">13 декабря 2026 года</time></span>
+                    </div>
+                  </div>
+
+                  <div class="card-modal-reviews__estimation">
+                    <span class="card-modal-reviews__name">Авточехол на Ford Fiesta</span>
+                    <!--если добавить класс "yellow" на svg то она становиться жетной-->
+                    <div class="box-stars">
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg class="yellow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-modal-reviews__bottom js-expandable-box">
+                  <div class="desc js-expandable-text">
+                    Хорошая консультация. Есть инструкция на сайте подробная для выполнения работ. Также есть
+                    тех поддержка по телефону. Хорошая консультация. Есть инструкция на сайте подробная для выполнения
+                    работ. Также есть тех поддержка по телефону. Подсказали ответы на вопросы
+                  </div>
+
+                  <button class="card-modal-reviews__btn btn-reset js-expandable-btn">
+                    Читать полностью
+                  </button>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="swiper-nav">
+            <div class="swiper-nav__group">
+              <button class="swiper-btn-type-1 --prev btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Prev"></use>
+                </svg>
+              </button>
+
+              <button class="swiper-btn-type-1 --next btn-reset">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                  <use xlink:href="img/sprite.svg#swiperBtnType1Next"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="swiper-modal-reviews-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="choice">
+      <div class="choice__left">
+        <div class="section-title padding-none">
+          <h2 class="section-title__text">
+            Почему<br>выбирают нас?
+          </h2>
+        </div>
+
+        <p class="choice__desc">
+          Многолетний опыт, технологии, качественное сырьё, профессиональный и сплочённый коллектив — всё это компоненты для того что бы бы создать лучший продукт для вашего авто
+        </p>
+      </div>
+      <div class="choice__right">
+        <ul class="choice__list list-reset">
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/1.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Особый<br>дизайн
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/2.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Лучшие<br>материалы
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/3.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Контроль<br>качества
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/4.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Удобная<br>доставка
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/5.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Точная<br>посадка
+              </h3>
+            </article>
+          </li>
+          <li>
+            <article class="card-choice">
+              <div class="card-choice__box-img">
+                <img src="img/card-choice/6.svg" alt="svg">
+              </div>
+              <h3 class="card-choice__title">
+                Гарантия<br>на продукцию
+              </h3>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="mt-124">
+  <div class="container">
+    <div class="section-order">
+      <div class="section-title">
+  <h2 class="section-title__text">
+    Как оформить заказ?
+  </h2>
+</div>
+
+      <ul class="section-order__list list-reset">
+        <li>
+          <article class="card-order">
+            <span class="count">1</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 1</span>
+              <h3 class="card-order__title">Оставляете<br>заявку</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-order">
+            <span class="count">2</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 2</span>
+              <h3 class="card-order__title">Менеджер уточняет<br>детали</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-order">
+            <span class="count">3</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 3</span>
+              <h3 class="card-order__title">Согласование<br>дизайна</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-order">
+            <span class="count">4</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 4</span>
+              <h3 class="card-order__title">Производится оплата<br>заказа</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-order">
+            <span class="count">5</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 5</span>
+              <h3 class="card-order__title">Производство<br>вашего заказа</h3>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card-order">
+            <span class="count">6</span>
+            <div class="card-order__info">
+              <span class="step">Шаг 6</span>
+              <h3 class="card-order__title">Контроль качества<br>и доставка</h3>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="background-gray-10 mt-156">
+  <div class="container">
+    <div class="write-us">
+      <div class="write-us__box-img">
+        <picture><source srcset="img/write-us/1.webp" type="image/webp"><img src="img/write-us/1.jpg" alt="img"></picture>
+      </div>
+      
+      <div class="write-us__wrapper">
+        <div class="section-title padding-none">
+          <h2 class="section-title__text">У вас остались вопросы?<br>Напишите нам!</h2>
+        </div>
+        <form class="js-form">
+          <div class="form-type-1">
+            <p class="form-type-1__desc">Заполните форму ниже и мы свяжемся с вами для уточнения деталей заказа</p>
+            
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+
+            <label class="input-type-1">
+              <input class="input-type-1__input js-phone-mask required required-phone" type="text" placeholder="Телефон">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+
+            <button class="btn-reset btn-submit-type-1 btn-order">
+              <span class="text">Отправить сообщение</span>
+            </button>
+
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <section class="mailing mt-156">
+  <div class="container">
+    <div class="mailing__wrapper">
+      <div class="mailing__left">
+        <h2 class="mailing__title">
+          Подписывайтесь на рассылку<br>Будьте в курсе акций и новинок
+        </h2>
+      </div>
+
+      <div class="mailing__right">
+        <form>
+          <div class="mailing-form">
+            <label class="mailing-intut">
+              <input class="mailing-intut__input" type="text" placeholder="Ваш электронный адрес">
+            </label>
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input" type="checkbox">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Подписаться» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+            <button class="mailing-submit btn-reset">
+              <span class="text">Подписаться</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top_wrapper">
+        
+        <div class="column">
+          <div class="logo-footer">
+  <a href="/" class="logo-footer__link">
+    <img src="img/logo/logo-footer.svg" alt="svg">
+  </a>
+  <p class="logo-footer__desc">Производство автомобильных чехлов<br>и аксессуаров с доставкой по всей России</p>
+</div>
+
+          <div class="footer__group-info">
+            <div class="box-info">
+              <span class="name">Адрес:</span>
+              <span class="text">Пункт самовывоза СДЭК<br>Иваново, ул. Спартака, д. 22</span>
+            </div>
+            <div class="box-info">
+              <span class="name">Телефон:</span>
+              <a href="tel:+7 904 055-52-02" class="phone">+7 904 055-52-02</a>
+            </div>
+            <div class="box-info">
+              <span class="name">Эл. адрес:</span>
+              <a href="mailto:info@dress4car.ru" class="mail">info@dress4car.ru</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каталог</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Акции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Новинки</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каркасные авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Перетяжка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Шумоизоляция</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Автоаксессуары</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Меню</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Галерея</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Установка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Инструкции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Вопрос-ответ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Оплата и доставка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <div class="footer__group-order">
+            <button class="btn-transparent btn-reset js-open-modal" data-modal="modal-feedback">
+              <span class="text">Заказать звонок</span>
+            </button>
+
+            <div class="box-network">
+              <span class="name">Мы на связи:</span>
+              <ul class="network-list list-reset">
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/tg.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/vk.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/avito-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/drive-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom_wrapper">
+        <p>© 2026 dress4car. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div class="bottom-menu">
+  <div class="container">
+    <div class="bottom-menu__line">
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#calalogBottom"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Каталог
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Избранное
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#basket"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Корзина
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#lk"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Личный кабинет
+        </span>
+      </a>
+
+    </div>
+  </div>
+</div>
+  <div class="modal" id="modal-feedback">
+  <div class="modal__body">
+    <button class="modal-feedback__close modal__close btn-reset js-close-modal">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <use xlink:href="img/sprite.svg#modalClose"></use>
+      </svg>
+    </button>
+
+    <div class="modal-feedback__window">
+      <form class="js-form">
+        <div class="form-type-1">
+          <h3 class="form-type-1__title">Запрос на подбор</h3>
+          <label class="input-type-1">
+            <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input js-phone-mask required required-phone" type="text" placeholder="Телефон">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input required required-mail" type="text" placeholder="Эл. адрес">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="textarea-type-1">
+            <textarea class="textarea-type-1__text" placeholder="Ваше сообщение"></textarea>
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <button class="btn-reset btn-submit-type-1 btn-order">
+            <span class="text">Отправить сообщение</span>
+          </button>
+
+          <label class="checkbox-type-1">
+            <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+            <span class="castom">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <p class="checkbox-type-1__desc">
+              Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+            </p>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

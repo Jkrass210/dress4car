@@ -1,0 +1,67 @@
+.card-banner {
+  display: flex;
+  position: sticky;
+  top: 30px;
+  width: 100%;
+  min-height: 388px;
+  @media (max-width: 1300px) {
+    min-height: 250px;
+    position: relative;
+    top: auto;
+  }
+  @media (max-width: 1000px) {
+    min-height: 172px;
+  }
+  &__box-img {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    .picture {
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__link {
+    height: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    @media (max-width: 1000px) {
+      padding: 20px;
+    }
+    .top-text {
+      color: var(--white, #FFF);
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 125%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 1000px) {
+        font-size: 20px;
+      }
+      i {
+        margin-left: 4px;
+        padding: 0 4px;
+        font-style: normal;
+        background-color: var(--red);
+      }
+    }
+    .bottom-text {
+      color: var(--white, #FFF);
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      
+    }
+  }
+}

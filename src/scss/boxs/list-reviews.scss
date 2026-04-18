@@ -1,0 +1,8 @@
+.list-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  @media (max-width: 1200px) {
+    gap: 28px;
+  }
+}

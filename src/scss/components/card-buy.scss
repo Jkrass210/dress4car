@@ -1,0 +1,46 @@
+.card-buy {
+  min-height: 292px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 34px;
+  padding: 32px 26px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--gray-10, #F6F6F6);
+  @media (max-width: 1000px) {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 70px;
+    z-index: 2;
+    min-height: 221px;
+    gap: 21px;
+    padding: 23px 22px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 -8px 16px 0 rgba(0, 0, 0, 0.08);
+  }
+  &__top {
+    padding: 0 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    @media (max-width: 1000px) {
+      gap: 6px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    @media (max-width: 1000px) {
+      gap: 6px;
+    }
+    .btn-order {
+      font-size: 17px;
+      width: 100%;
+      @media (max-width: 1000px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

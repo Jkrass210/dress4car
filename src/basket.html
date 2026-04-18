@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Корзина"})
+
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+
+    <div class="path">
+      <div class="container">
+        <div class="path__line">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Главная страница
+                </span>
+              </a>
+            </li>
+            <li>
+              <span class="path__link">
+                <span class="text">
+                  Корзина и оформление заказа
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title__line">
+          <h1 class="page-title__text">Корзина и оформление заказа</h1>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="box-basket">
+          <div class="box-basket__wrapper">
+            <div class="box-basket__left">
+              <h3 class="box-basket__title">У вас в заказе</h3>
+              <ul class="box-basket__list list-reset">
+                <li>
+                  <article class="card-basket">
+                    <a href="#" class="link-remove">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </a>
+                    <div class="card-basket__top">
+                      <span class="card-basket__box-img">
+                        <img src="img/card-main-detail/1.jpg" alt="img">
+                      </span>
+                      <h4 class="card-basket__title">Оплетка руля для Chevrolet Aveo</h4>
+                    </div>
+                    <div class="card-basket__middle">
+                      <div class="list-points">
+                        <span class="point">Класс изделия: <i>Швайцер Hanna</i></span>
+                        <span class="point">Материал центральной части: <i>Алькантара</i></span>
+                        <span class="point">Стиль отделки: <i>Ромб комбинированный 2</i></span>
+                        <span class="point color">Цвет основной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/2.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет отделки
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/1.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/3.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/4.jpg');"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card-basket__bottom">
+                      <div class="counter">
+                        <button class="counter__btn btn-reset minus">
+                          <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                            <use xlink:href="img/sprite.svg#countMinus"></use>
+                          </svg>
+                        </button>
+                        <input class="counter__input" type="text" value="1">
+                        <button class="counter__btn btn-reset plus">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <use xlink:href="img/sprite.svg#countPlus"></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="price">
+                        <div class="price_top">
+                          <span class="old-price">9 900₽</span>
+                          <span class="actual-price">6 000₽</span>
+                        </div>
+                        <span class="benefit-price">Выгода 3900₽</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-basket">
+                    <a href="#" class="link-remove">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </a>
+                    <div class="card-basket__top">
+                      <span class="card-basket__box-img">
+                        <img src="img/card-main-detail/3.jpg" alt="img">
+                      </span>
+                      <h4 class="card-basket__title">Оплетка руля для dfgdf drgdf Оплетка руля для dfgdf drgdf srger
+                        dger Chevrolet Aveo srger dger Chevrolet Aveo</h4>
+                    </div>
+                    <div class="card-basket__middle">
+                      <div class="list-points">
+                        <span class="point">Класс изделия: <i>Швайцер Hanna</i></span>
+                        <span class="point">Материал центральной части: <i>Алькантара</i></span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/3.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/4.jpg');"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card-basket__bottom">
+                      <div class="counter">
+                        <button class="counter__btn btn-reset minus">
+                          <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                            <use xlink:href="img/sprite.svg#countMinus"></use>
+                          </svg>
+                        </button>
+                        <input class="counter__input" type="text" value="1">
+                        <button class="counter__btn btn-reset plus">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <use xlink:href="img/sprite.svg#countPlus"></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="price">
+                        <span class="actual-price">6 000₽</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box-basket__person">
+            <h3 class="box-basket__title">Данные получателя</h3>
+            <div class="input-group-type-1">
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Ваше ФИО">
+              </label>
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Номер телефона">
+              </label>
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Эл. адрес">
+              </label>
+              <label class="input-type-3">
+                <input class="input-type-3__input" type="text" placeholder="Начните вводить ваш город">
+                <span class="input-type-3__desc">Выберите свой город в списке. Если вы не нашли свой город, впишите название вашего населённого пункта в ручную</span>
+              </label>
+              <label class="textarea-type-2">
+                <textarea class="textarea-type-2__text" placeholder="Комментарий к заказу"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="box-basket__card-your-order">
+            <article class="card-your-order">
+              <h4 class="card-your-order__title">Ваш заказ</h4>
+              <div class="card-your-order__price-info">
+                <div class="price-info__line">
+                  <span class="name">На сумму</span>
+                  <span class="between"></span>
+                  <span class="info">1 625₽</span>
+                </div>
+                <div class="price-info__line">
+                  <span class="name">Скидка</span>
+                  <span class="between"></span>
+                  <span class="info">625₽</span>
+                </div>
+                <div class="price-info__line">
+                  <span class="name">Доставка</span>
+                  <span class="between"></span>
+                  <span class="info">Бесплатно</span>
+                </div>
+              </div>
+              <div class="card-your-order__total">
+                <div class="total-line">
+                  <span class="name">Итого:</span>
+                  <span class="between"></span>
+                  <span class="info">1 000₽</span>
+                </div>
+                <a href="#" class="btn-order">
+                  <span class="text">Оформить заказ</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/boxs/mailing.html')
+  @@include('html/boxs/footer.html')
+  @@include('html/boxs/bottom-menu.html')
+  @@include('html/boxs/modals.html')
+</body>
+
+</html>

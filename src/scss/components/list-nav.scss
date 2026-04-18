@@ -1,0 +1,21 @@
+.list-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    flex-wrap: nowrap;
+    /*overflow: auto;
+    max-height: 100%;
+    min-height: 150px;*/
+  }
+  li:last-child {
+    display: none;
+    @media (max-width: 1000px) {
+      display: list-item;
+    }
+  }
+}

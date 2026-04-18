@@ -1,0 +1,23 @@
+.filter-type-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .drop-down-type-1 {
+    &__input {
+      padding: 16px 20px;
+      border-radius: 16px !important;
+      border: 1.6px solid var(--gray-20, #F1F1F1);
+    }
+    &__btn {
+      padding: 16px 20px;
+    }
+    &__choice {
+      border-radius: 16px;
+      border: 1.6px solid var(--gray-20, #F1F1F1);
+    }
+  }
+}

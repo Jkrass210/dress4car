@@ -1,0 +1,11 @@
+.choice-line {
+  width: 100%;
+  @media (max-width: 1300px) {
+    width: calc(100% + 24px + 24px);
+    margin: 0 -24px;
+  }
+  @media (max-width: 1000px) {
+    width: calc(100% + 16px + 16px);
+    margin: 0 -16px;
+  }
+}

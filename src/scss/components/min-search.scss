@@ -1,0 +1,42 @@
+.min-search {
+  padding: 12px 24px;
+
+  &__line {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 12px 24px;
+    width: 100%;
+    border-radius: 16px;
+    color: var(--black, #000);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    border: 1px solid var(--gray-20, #F1F1F1);
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__subnit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50px;
+    color: var(--blue, #0022B2);
+    transition: color 0.4s ease-in-out;
+    @media (min-width: 1001px) {
+      &:focus-visible,&:hover {
+        color: var(--black, #000);
+      }
+    }
+  }
+}

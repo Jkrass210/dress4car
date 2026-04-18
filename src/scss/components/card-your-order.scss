@@ -1,0 +1,97 @@
+.card-your-order {
+  width: 100%;
+  padding: 28px;
+  border-radius: 24px;
+  background-color: var(--gray-10, #F6F6F6);
+  &__title {
+    margin-bottom: 16px;
+    color: var(--black, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .price-info__line {
+    display: flex;
+    justify-content: space-between;
+    .name {
+      color: var(--main-text_gray, #929495);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
+    }
+
+    .between {
+      margin: 0 8px;
+      min-width: 26px;
+      flex: 1;
+      background-image: linear-gradient(to right, #A1A1A2 0%, #A1A1A2 60%, transparent 40%, transparent 100%);
+      background-size: 10px 0.9px;
+      background-position: left bottom 4px;
+      background-repeat: repeat-x;
+    }
+
+    .info {
+      color: var(--black, #000);
+      text-align: right;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__total {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    .name {
+      color: var(--black, #000);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @media (max-width: 1200px) {
+        font-size: 17px;
+      }
+    }
+    .between {
+      margin: 0 8px;
+      min-width: 26px;
+      flex: 1;
+    }
+    .info {
+      color: var(--black, #000);
+      text-align: right;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+    }
+  }
+  .btn-order {
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+.textarea-type-1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  &:has(.error) {
+    .message-error {
+      display: inline-block;
+    }
+  }
+  &__text {
+    padding: 16px 20px;
+    min-height: 128px;
+    border-radius: 16px;
+    color: var(--black, #000);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    border: 1px solid var(--gray-20, #F1F1F1);
+    transition: border-color 0.4s ease-in-out;
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+      transition: color 0.4s ease-in-out;
+    }
+    &.error {
+      border-color: var(--red);
+      &::placeholder {
+        color: var(--red);
+      }
+    }
+  }
+
+  .message-error {
+    display: none;
+    color: var(--red, #F60114);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}

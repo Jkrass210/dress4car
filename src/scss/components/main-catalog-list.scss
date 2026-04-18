@@ -1,0 +1,8 @@
+.main-catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  @media (max-width: 1000px) {
+    gap: 16px;
+  }
+}

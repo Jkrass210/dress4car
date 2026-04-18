@@ -1,0 +1,11 @@
+.box-stars {
+  display: flex;
+  gap: 6px;
+  color: #F6F6F6;
+  svg {
+    cursor: pointer;
+    &.yellow {
+      color: #FFCC00;
+    }
+  }
+}

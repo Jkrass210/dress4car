@@ -1,0 +1,20 @@
+.info-banner {
+  display: flex;
+  gap: 24px;
+  @media (max-width: 1300px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  &__info-wrapp {
+    width: calc(948 / 1272 * 100%);
+    @media (max-width: 1300px) {
+      width: 100%;
+    }
+  }
+  &__banner-wrapp {
+    width: calc(300 / 1272 * 100%);
+    @media (max-width: 1300px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Контакты"})
+
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+
+    <div class="path">
+      <div class="container">
+        <div class="path__line">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Главная страница
+                </span>
+              </a>
+            </li>
+            <li>
+              <span class="path__link">
+                <span class="text">
+                  Контакты
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title__line">
+          <h1 class="page-title__text">Контакты</h1>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="info-banner">
+          <div class="info-banner__info-wrapp">
+            <ul class="contacts-list list-reset">
+              <li>
+                <article class="card-contacts">
+                  <h3 class="card-contacts__title">г. Иваново</h3>
+                  <div class="card-contacts__info-list">
+                    <div class="box-contacts time">
+                      <span class="name">Часы работы</span>
+                      <span class="text">
+                        С понедельника по пятницу 09:00 - 19:00 <br>
+                        Суббота 09:00 - 16:00 <br>
+                        Воскресенье выходной <br>
+                      </span>
+                    </div>
+
+                    <div class="box-contacts phone">
+                      <span class="name">Телефон</span>
+                      <span class="text">
+                        <a href="tel:+7 904 055-52-02">+7 904 055-52-02</a> (WhatsApp, Viber)
+                      </span>
+                    </div>
+
+                    <div class="box-contacts mail">
+                      <span class="name">Эл. адрес:</span>
+                      <a href="mailto:info@dress4car.ru" class="mail">info@dress4car.ru</a>
+                    </div>
+
+                    <div class="box-contacts manager">
+                      <span class="name">Менеджер</span>
+                      <span class="text">Александр</span>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="card-contacts">
+                  <h3 class="card-contacts__title">г. Иваново</h3>
+                  <div class="card-contacts__info-list">
+                    <div class="box-contacts time">
+                      <span class="name">Часы работы</span>
+                      <span class="text">
+                        С понедельника по пятницу 09:00 - 19:00 <br>
+                        Суббота 09:00 - 16:00 <br>
+                        Воскресенье выходной <br>
+                      </span>
+                    </div>
+
+                    <div class="box-contacts phone">
+                      <span class="name">Телефон</span>
+                      <span class="text">
+                        <a href="tel:+7 904 055-52-02">+7 904 055-52-02</a> (WhatsApp, Viber)
+                      </span>
+                    </div>
+
+                    <div class="box-contacts mail">
+                      <span class="name">Эл. адрес:</span>
+                      <a href="mailto:info@dress4car.ru" class="mail">info@dress4car.ru</a>
+                    </div>
+
+                    <div class="box-contacts manager">
+                      <span class="name">Менеджер</span>
+                      <span class="text">Александр</span>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="info-banner__banner-wrapp">
+            <article class="card-banner">
+              <div class="card-banner__box-img">
+                <picture>
+                  <source srcset="img/card-banner/bg1000.jpg" media="(max-width: 1300px)">
+                  <img class="gallery__image" src="img/card-banner/bg.jpg" alt="img">
+                </picture>
+              </div>
+              <a href="#" class="card-banner__link">
+                <span class="top-text">
+                  <span>Скидка<i>-10%</i></span>
+                  <span>для новых <br>покупателей</span>
+                </span>
+
+                <span class="bottom-text">Скидка распространяется на собственного производство. Список доступных марок
+                  уточняйте у менеджеров.</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-156">
+      <div class="container">
+        <div class="box-map">
+
+          <div class="map-contacts" id="map-contacts"></div>
+          <script>
+            ymaps.ready(init);
+
+            function init() {
+              const map = new ymaps.Map("map-contacts", {
+                center: [56.999799, 40.973014],
+                zoom: 13,
+                controls: [] // Отключаем все элементы управления
+              });
+
+              const placemark = new ymaps.Placemark(
+                [57.010249, 40.994627],
+                {
+                  hintContent: "Моя метка",
+                  balloonContent: "Описание"
+                },
+                {
+                  iconLayout: 'default#image',
+                  iconImageHref: 'img/map/map.svg',
+                  iconImageSize: [26, 32],
+                  iconImageOffset: [0, 0]
+                }
+              );
+
+              map.geoObjects.add(placemark);
+            }
+          </script>
+
+        </div>
+      </div>
+    </section>
+
+    @@include('html/boxs/write-us.html')
+  </main>
+  @@include('html/boxs/mailing.html')
+  @@include('html/boxs/footer.html')
+  @@include('html/boxs/bottom-menu.html')
+  @@include('html/boxs/modals.html')
+</body>
+
+</html>

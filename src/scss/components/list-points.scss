@@ -1,0 +1,39 @@
+.list-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  .point {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: var(--gray-10, #F6F6F6);
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    @media (max-width: 1000px) {
+      font-size: 13px;
+      padding: 4px 12px;
+    }
+    i {
+      color: var(--black, #000);
+      font-style: normal;
+    }
+    &.color {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--black, #000);
+    }
+    &__color {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      display: flex;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

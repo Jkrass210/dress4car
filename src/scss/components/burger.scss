@@ -1,0 +1,16 @@
+.burger {
+  display: none;
+  @media (max-width: 1000px) {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-2);
+    border-radius: 8px;
+    .svg {
+      display: flex;
+    }
+  }
+}

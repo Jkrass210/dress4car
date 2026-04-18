@@ -1,0 +1,30 @@
+.card-contacts {
+  padding: 32px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--gray-10, #F6F6F6);
+  @media (max-width: 1000px) {
+    padding: 24px;
+    gap: 16px;
+  }
+  &__title {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    @media (max-width: 1000px) {
+      font-size: 20px;
+    }
+  }
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @media (max-width: 1000px) {
+      gap: 20px;
+    }
+  }
+}

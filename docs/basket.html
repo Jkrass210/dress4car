@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link href="css/normalize.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/style.css?_v=20260407155407" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260407155407"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260407155407" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260407155407" defer></script>
+  <script src="js/fslightbox.js?_v=20260407155407" defer></script>
+  <script type="module" src="js/main.js?_v=20260407155407"></script>
+</head>
+
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top_line">
+        <a href="#" class="link-write">
+          <span class="svg">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+              <use xlink:href="img/sprite.svg#linkWrite"></use>
+            </svg>
+          </span>
+          <span class="text">
+            Написать директору
+          </span>
+        </a>
+
+        <ul class="network-list list-reset">
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/w.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/tg.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/vk.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/avito.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/drive.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle_line">
+        <a href="/" class="logo">
+  <img src="img/logo/logo.svg" alt="logo">
+</a>
+        <div class="header__middle_right">
+          <div class="box-order drop-down-tipe-1">
+            <button class="box-order__btn btn-reset drop-down-tipe-1__btn">
+              <span class="svg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                </svg>
+              </span>
+            </button>
+
+            <div class="box-order__box drop-down-tipe-1__box drop-down-tipe-1__group-elem">
+              <a href="tel:+7 904 055-52-02" class="link-phone">
+                <span class="svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  +7 904 055-52-02
+                </span>
+              </a>
+
+              <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal" data-modal="modal-feedback">
+                <span class="text">Заказать звонок</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="group-btn">
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Избранное
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Корзина
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#lk"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Личный кабинет
+              </span>
+            </a>
+          </div>
+
+          <button class="burger btn-reset">
+            <span class="svg">
+              <svg width="23" height="18" viewBox="0 0 23 18" fill="none">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom_line">
+        <button class="header__bottom_line__close btn-reset js-close mobile">
+          <span class="svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#bottomLineClose"></use>
+            </svg>
+          </span>
+        </button>
+        <nav class="header__nav">
+          <ul class="list-nav list-reset">
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#cataloc"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#stocks"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Акции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Установка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Инструкции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Вопрос-ответ
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Оплата и доставка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Контакты
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <use xlink:href="img/sprite.svg#linkWrite"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Написать директору
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__bottom_line__order-group mobile">
+          <a href="tel:+7 904 055-52-02" class="link-phone">
+            <span class="svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#phoneBtn"></use>
+              </svg>
+            </span>
+            <span class="text">
+              +7 904 055-52-02
+            </span>
+          </a>
+
+          <button class="btn-order btn-reset">
+            <span class="text">Заказать звонок</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+
+    <div class="path">
+      <div class="container">
+        <div class="path__line">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Главная страница
+                </span>
+              </a>
+            </li>
+            <li>
+              <span class="path__link">
+                <span class="text">
+                  Корзина и оформление заказа
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title__line">
+          <h1 class="page-title__text">Корзина и оформление заказа</h1>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="box-basket">
+          <div class="box-basket__wrapper">
+            <div class="box-basket__left">
+              <h3 class="box-basket__title">У вас в заказе</h3>
+              <ul class="box-basket__list list-reset">
+                <li>
+                  <article class="card-basket">
+                    <a href="#" class="link-remove">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </a>
+                    <div class="card-basket__top">
+                      <span class="card-basket__box-img">
+                        <picture><source srcset="img/card-main-detail/1.webp" type="image/webp"><img src="img/card-main-detail/1.jpg" alt="img"></picture>
+                      </span>
+                      <h4 class="card-basket__title">Оплетка руля для Chevrolet Aveo</h4>
+                    </div>
+                    <div class="card-basket__middle">
+                      <div class="list-points">
+                        <span class="point">Класс изделия: <i>Швайцер Hanna</i></span>
+                        <span class="point">Материал центральной части: <i>Алькантара</i></span>
+                        <span class="point">Стиль отделки: <i>Ромб комбинированный 2</i></span>
+                        <span class="point color">Цвет основной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/2.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет отделки
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/1.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/3.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/4.jpg');"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card-basket__bottom">
+                      <div class="counter">
+                        <button class="counter__btn btn-reset minus">
+                          <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                            <use xlink:href="img/sprite.svg#countMinus"></use>
+                          </svg>
+                        </button>
+                        <input class="counter__input" type="text" value="1">
+                        <button class="counter__btn btn-reset plus">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <use xlink:href="img/sprite.svg#countPlus"></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="price">
+                        <div class="price_top">
+                          <span class="old-price">9 900₽</span>
+                          <span class="actual-price">6 000₽</span>
+                        </div>
+                        <span class="benefit-price">Выгода 3900₽</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-basket">
+                    <a href="#" class="link-remove">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </a>
+                    <div class="card-basket__top">
+                      <span class="card-basket__box-img">
+                        <picture><source srcset="img/card-main-detail/3.webp" type="image/webp"><img src="img/card-main-detail/3.jpg" alt="img"></picture>
+                      </span>
+                      <h4 class="card-basket__title">Оплетка руля для dfgdf drgdf Оплетка руля для dfgdf drgdf srger
+                        dger Chevrolet Aveo srger dger Chevrolet Aveo</h4>
+                    </div>
+                    <div class="card-basket__middle">
+                      <div class="list-points">
+                        <span class="point">Класс изделия: <i>Швайцер Hanna</i></span>
+                        <span class="point">Материал центральной части: <i>Алькантара</i></span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/3.jpg');"></span>
+                        </span>
+                        <span class="point color">Цвет центральной части
+                          <span class="point__color"
+                            style="background-image: url('img/radio-type-color/4.jpg');"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card-basket__bottom">
+                      <div class="counter">
+                        <button class="counter__btn btn-reset minus">
+                          <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                            <use xlink:href="img/sprite.svg#countMinus"></use>
+                          </svg>
+                        </button>
+                        <input class="counter__input" type="text" value="1">
+                        <button class="counter__btn btn-reset plus">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <use xlink:href="img/sprite.svg#countPlus"></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="price">
+                        <span class="actual-price">6 000₽</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box-basket__person">
+            <h3 class="box-basket__title">Данные получателя</h3>
+            <div class="input-group-type-1">
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Ваше ФИО">
+              </label>
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Номер телефона">
+              </label>
+              <label class="input-type-2">
+                <input class="input-type-2__input" type="text" placeholder="Эл. адрес">
+              </label>
+              <label class="input-type-3">
+                <input class="input-type-3__input" type="text" placeholder="Начните вводить ваш город">
+                <span class="input-type-3__desc">Выберите свой город в списке. Если вы не нашли свой город, впишите название вашего населённого пункта в ручную</span>
+              </label>
+              <label class="textarea-type-2">
+                <textarea class="textarea-type-2__text" placeholder="Комментарий к заказу"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="box-basket__card-your-order">
+            <article class="card-your-order">
+              <h4 class="card-your-order__title">Ваш заказ</h4>
+              <div class="card-your-order__price-info">
+                <div class="price-info__line">
+                  <span class="name">На сумму</span>
+                  <span class="between"></span>
+                  <span class="info">1 625₽</span>
+                </div>
+                <div class="price-info__line">
+                  <span class="name">Скидка</span>
+                  <span class="between"></span>
+                  <span class="info">625₽</span>
+                </div>
+                <div class="price-info__line">
+                  <span class="name">Доставка</span>
+                  <span class="between"></span>
+                  <span class="info">Бесплатно</span>
+                </div>
+              </div>
+              <div class="card-your-order__total">
+                <div class="total-line">
+                  <span class="name">Итого:</span>
+                  <span class="between"></span>
+                  <span class="info">1 000₽</span>
+                </div>
+                <a href="#" class="btn-order">
+                  <span class="text">Оформить заказ</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="mailing mt-156">
+  <div class="container">
+    <div class="mailing__wrapper">
+      <div class="mailing__left">
+        <h2 class="mailing__title">
+          Подписывайтесь на рассылку<br>Будьте в курсе акций и новинок
+        </h2>
+      </div>
+
+      <div class="mailing__right">
+        <form>
+          <div class="mailing-form">
+            <label class="mailing-intut">
+              <input class="mailing-intut__input" type="text" placeholder="Ваш электронный адрес">
+            </label>
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input" type="checkbox">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Подписаться» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+            <button class="mailing-submit btn-reset">
+              <span class="text">Подписаться</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top_wrapper">
+        
+        <div class="column">
+          <div class="logo-footer">
+  <a href="/" class="logo-footer__link">
+    <img src="img/logo/logo-footer.svg" alt="svg">
+  </a>
+  <p class="logo-footer__desc">Производство автомобильных чехлов<br>и аксессуаров с доставкой по всей России</p>
+</div>
+
+          <div class="footer__group-info">
+            <div class="box-info">
+              <span class="name">Адрес:</span>
+              <span class="text">Пункт самовывоза СДЭК<br>Иваново, ул. Спартака, д. 22</span>
+            </div>
+            <div class="box-info">
+              <span class="name">Телефон:</span>
+              <a href="tel:+7 904 055-52-02" class="phone">+7 904 055-52-02</a>
+            </div>
+            <div class="box-info">
+              <span class="name">Эл. адрес:</span>
+              <a href="mailto:info@dress4car.ru" class="mail">info@dress4car.ru</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каталог</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Акции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Новинки</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каркасные авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Перетяжка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Шумоизоляция</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Автоаксессуары</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Меню</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Галерея</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Установка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Инструкции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Вопрос-ответ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Оплата и доставка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <div class="footer__group-order">
+            <button class="btn-transparent btn-reset js-open-modal" data-modal="modal-feedback">
+              <span class="text">Заказать звонок</span>
+            </button>
+
+            <div class="box-network">
+              <span class="name">Мы на связи:</span>
+              <ul class="network-list list-reset">
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/tg.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/vk.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/avito-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/drive-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom_wrapper">
+        <p>© 2026 dress4car. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div class="bottom-menu">
+  <div class="container">
+    <div class="bottom-menu__line">
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#calalogBottom"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Каталог
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Избранное
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#basket"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Корзина
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#lk"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Личный кабинет
+        </span>
+      </a>
+
+    </div>
+  </div>
+</div>
+  <div class="modal" id="modal-feedback">
+  <div class="modal__body">
+    <button class="modal-feedback__close modal__close btn-reset js-close-modal">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <use xlink:href="img/sprite.svg#modalClose"></use>
+      </svg>
+    </button>
+
+    <div class="modal-feedback__window">
+      <form class="js-form">
+        <div class="form-type-1">
+          <h3 class="form-type-1__title">Запрос на подбор</h3>
+          <label class="input-type-1">
+            <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input js-phone-mask required required-phone" type="text" placeholder="Телефон">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input required required-mail" type="text" placeholder="Эл. адрес">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="textarea-type-1">
+            <textarea class="textarea-type-1__text" placeholder="Ваше сообщение"></textarea>
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <button class="btn-reset btn-submit-type-1 btn-order">
+            <span class="text">Отправить сообщение</span>
+          </button>
+
+          <label class="checkbox-type-1">
+            <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+            <span class="castom">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <p class="checkbox-type-1__desc">
+              Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+            </p>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

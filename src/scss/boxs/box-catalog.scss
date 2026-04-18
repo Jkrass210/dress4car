@@ -1,0 +1,38 @@
+.box-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  @media (max-width: 1000px) {
+    gap: 24px;
+  }
+
+  .card-choice-line {
+    &__link {
+      min-height: 215px;
+      padding: 28px;
+      font-size: 18px;
+      @media (max-width: 1000px) {
+        padding: 20px;
+        font-size: 16px;
+      }
+    }
+    &.img-none {
+      border: 1px solid var(--gray-20, #F1F1F1);
+      .card-choice-line__box-img {
+        background-image: url('../img/card-choice-line/bg.png');
+        background-repeat: no-repeat;
+        background-position: center top 32px;
+      }
+      .card-choice-line__link {
+        align-items: center;
+        color: var(--black);
+        .text {
+          text-align: center;
+        }
+        @media (max-width: 1000px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

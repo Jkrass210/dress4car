@@ -1,0 +1,36 @@
+.input-type-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-image: url(../img/geo/geo.svg);
+  background-repeat: no-repeat;
+  background-position: top 22px left 24px;
+  &__input {
+    padding: 21px 23px 21px 55px;
+    width: 100%;
+    border-radius: 16px;
+    color: var(--black, #000);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    background-color: transparent;
+    border: 1px solid var(--gray-20, #F1F1F1);
+    @media (max-width: 1000px) {
+      font-size: 17px;
+    }
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__desc {
+    color: var(--black, #000);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    @media (max-width: 1000px) {
+      font-size: 15px;
+    }
+  }
+}

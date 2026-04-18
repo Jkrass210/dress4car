@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Geist";
+  src: local("Geist-Bold"),
+    url("../fonts/Geist-Bold.woff2") format("woff2"),
+    url("../fonts/Geist-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: local("Geist-SemiBold"),
+    url("../fonts/Geist-SemiBold.woff2") format("woff2"),
+    url("../fonts/Geist-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: local("Geist-Medium"),
+    url("../fonts/Geist-Medium.woff2") format("woff2"),
+    url("../fonts/Geist-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: local("Geist-Regular"),
+    url("../fonts/Geist-Regular.woff2") format("woff2"),
+    url("../fonts/Geist-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GolosText";
+  src: local("GolosText-Regular"),
+    url("../fonts/GolosText-Regular.woff2") format("woff2"),
+    url("../fonts/GolosText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

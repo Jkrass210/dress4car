@@ -1,0 +1,122 @@
+.footer {
+  padding: 72px 0 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 28px 28px 0 0;
+  background-color: var(--black, #000);
+  color: var(--white);
+
+  @media (max-width: 1000px) {
+    padding: 36px 0 80px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: var(--blue-2, #0022B2);
+  }
+
+  &__top {
+    &_wrapper {
+      padding-bottom: 72px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      @media (max-width: 1200px) {
+        padding-bottom: 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 19px;
+        row-gap: 32px;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @media (max-width: 1200px) {
+          &:first-child {
+            grid-area: 1 / 1 / 2 / 3;
+          }
+          &:last-child {
+            grid-area: 2 / 1 / 3 / 3;
+          }
+        }
+        
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 28px;
+
+    @media (max-width: 1200px) {
+      padding-top: 32px;
+    }
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 4px;
+        align-items: start;
+      }
+      a {
+        text-decoration: underline;
+        @media (min-width: 1001px) {
+          &:focus-visible,&:hover {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  &__group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 1200px) {
+      gap: 16px;
+    }
+    li:first-child {
+      .link-footer-nav {
+        font-weight: 600;
+        @media (max-width: 1200px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__group-order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 1000px) {
+      gap: 16px;
+    }
+  }
+
+}

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chevrolet Aveo</title>
+  <link href="css/normalize.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260407155407" rel="stylesheet">
+  <link href="css/style.css?_v=20260407155407" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260407155407"></script>
+  
+  <script src="js/jquery-3.7.1.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260407155407" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260407155407" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260407155407" defer></script>
+  <script src="js/fslightbox.js?_v=20260407155407" defer></script>
+  <script type="module" src="js/main.js?_v=20260407155407"></script>
+</head>
+
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top_line">
+        <a href="#" class="link-write">
+          <span class="svg">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+              <use xlink:href="img/sprite.svg#linkWrite"></use>
+            </svg>
+          </span>
+          <span class="text">
+            Написать директору
+          </span>
+        </a>
+
+        <ul class="network-list list-reset">
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/w.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/tg.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/vk.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/avito.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-network">
+              <span class="svg">
+                <img src="img/network/drive.svg" alt="svg">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle_line">
+        <a href="/" class="logo">
+  <img src="img/logo/logo.svg" alt="logo">
+</a>
+        <div class="header__middle_right">
+          <div class="box-order drop-down-tipe-1">
+            <button class="box-order__btn btn-reset drop-down-tipe-1__btn">
+              <span class="svg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                </svg>
+              </span>
+            </button>
+
+            <div class="box-order__box drop-down-tipe-1__box drop-down-tipe-1__group-elem">
+              <a href="tel:+7 904 055-52-02" class="link-phone">
+                <span class="svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <use xlink:href="img/sprite.svg#phoneBtn"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  +7 904 055-52-02
+                </span>
+              </a>
+
+              <button class="btn-order btn-reset drop-down-tipe-1-close js-open-modal" data-modal="modal-feedback">
+                <span class="text">Заказать звонок</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="group-btn">
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Избранное
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="count">2</span>
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Корзина
+              </span>
+            </a>
+
+            <a href="#" class="link-main-group">
+              <span class="svg">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <use xlink:href="img/sprite.svg#lk"></use>
+                </svg>
+              </span>
+              <span class="text">
+                Личный кабинет
+              </span>
+            </a>
+          </div>
+
+          <button class="burger btn-reset">
+            <span class="svg">
+              <svg width="23" height="18" viewBox="0 0 23 18" fill="none">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom_line">
+        <button class="header__bottom_line__close btn-reset js-close mobile">
+          <span class="svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#bottomLineClose"></use>
+            </svg>
+          </span>
+        </button>
+        <nav class="header__nav">
+          <ul class="list-nav list-reset">
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#cataloc"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <use xlink:href="img/sprite.svg#stocks"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Акции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Установка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Инструкции
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Вопрос-ответ
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Оплата и доставка
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="text">
+                  Контакты
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link-nav">
+                <span class="svg">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <use xlink:href="img/sprite.svg#linkWrite"></use>
+                  </svg>
+                </span>
+                <span class="text">
+                  Написать директору
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__bottom_line__order-group mobile">
+          <a href="tel:+7 904 055-52-02" class="link-phone">
+            <span class="svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#phoneBtn"></use>
+              </svg>
+            </span>
+            <span class="text">
+              +7 904 055-52-02
+            </span>
+          </a>
+
+          <button class="btn-order btn-reset">
+            <span class="text">Заказать звонок</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+
+    <div class="path">
+      <div class="container">
+        <div class="path__line">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Главная страница
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="path__link">
+                <span class="text">
+                  Chevrolet
+                </span>
+              </a>
+            </li>
+            <li>
+              <span class="path__link">
+                <span class="text">
+                  Chevrolet Aveo
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title__line">
+          <h1 class="page-title__text">Chevrolet Aveo</h1>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="info-banner">
+          <div class="info-banner__info-wrapp">
+
+            <div class="box-catalog">
+
+              <ul class="second-catalog-list list-reset">
+                <li>
+                  <article class="card-choice-line">
+                    <h3 class="title">Оплетка руля</h3>
+                    <span class="card-choice-line__box-img">
+                      <picture><source srcset="img/card-choice-line/1.webp" type="image/webp"><img src="img/card-choice-line/1.jpg" alt="Оплетка руля"></picture>
+                    </span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Оплетка <br>руля
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line">
+                    <h3 class="title">Коврики текстильные</h3>
+                    <span class="card-choice-line__box-img">
+                      <picture><source srcset="img/card-choice-line/2.webp" type="image/webp"><img src="img/card-choice-line/2.jpg" alt="Коврики текстильные"></picture>
+                    </span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Коврики <br>текстильные
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line">
+                    <h3 class="title">Накидка под детское кресло</h3>
+                    <span class="card-choice-line__box-img">
+                      <picture><source srcset="img/card-choice-line/4.webp" type="image/webp"><img src="img/card-choice-line/4.jpg" alt="Накидка под детское кресло"></picture>
+                    </span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Накидка под <br>детское кресло
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line">
+                    <h3 class="title">Накидка под детское кресло</h3>
+                    <span class="card-choice-line__box-img">
+                      <picture><source srcset="img/card-choice-line/4.webp" type="image/webp"><img src="img/card-choice-line/4.jpg" alt="Накидка под детское кресло"></picture>
+                    </span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Накидка под <br>детское кресло
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Накидка под бустер</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Накидка под бустер
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Защитная накидка</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Защитная накидка
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Накидка на кресло</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Накидка на кресло
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Подушка анатомическая</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Подушка анатомическая
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Подушка валик</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Подушка валик
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+                <li>
+                  <article class="card-choice-line img-none"><!--если нет изображения-->
+                    <h3 class="title">Подушка квадратная</h3>
+                    <span class="card-choice-line__box-img"></span>
+                    <a href="#" class="card-choice-line__link">
+                      <span class="text">
+                        Подушка квадратная
+                      </span>
+                    </a>
+                  </article>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <div class="info-banner__banner-wrapp">
+            <article class="card-banner">
+              <div class="card-banner__box-img">
+                <picture>
+                  <source srcset="img/card-banner/bg1000.jpg" media="(max-width: 1300px)">
+                  <img class="gallery__image" src="img/card-banner/bg.jpg" alt="img">
+                </picture>
+              </div>
+              <a href="#" class="card-banner__link">
+                <span class="top-text">
+                  <span>Скидка<i>-10%</i></span>
+                  <span>для новых <br>покупателей</span>
+                </span>
+
+                <span class="bottom-text">Скидка распространяется на собственного производство. Список доступных марок
+                  уточняйте у менеджеров.</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-156">
+      <div class="container">
+        <div class="static-text">
+          <h3>Заголовок для SEO-текста</h3>
+          <p>Но ключевые особенности структуры проекта лишь добавляют фракционных разногласий и функционально разнесены
+            на независимые элементы. Безусловно, начало повседневной работы по формированию позиции позволяет выполнить
+            важные задания по разработке новых предложений. Однозначно, непосредственные участники технического
+            прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть рассмотрены исключительно в
+            разрезе маркетинговых и финансовых предпосылок. Однозначно, активно развивающиеся страны третьего мира
+            освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется,
+            превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Как уже
+            неоднократно упомянуто, диаграммы связей неоднозначны и будут заблокированы в рамках своих собственных
+            рациональных ограничений.</p>
+          <p>Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
+            дальнейшее развитие различных форм деятельности не оставляет шанса для системы массового участия! Как
+            принято считать, многие известные личности подвергнуты целой серии независимых исследований. Значимость этих
+            проблем настолько очевидна, что сложившаяся структура организации предоставляет широкие возможности для
+            модели развития. А ещё представители современных социальных резервов могут быть объединены в целые кластеры
+            себе подобных! Однозначно, предприниматели в сети интернет, вне зависимости от их уровня, должны быть
+            превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</p>
+          <p>Есть над чем задуматься: представители современных социальных резервов обнародованы. Следует отметить, что
+            понимание сути ресурсосберегающих технологий, а также свежий взгляд на привычные вещи — безусловно открывает
+            новые горизонты для стандартных подходов. Внезапно, тщательные исследования конкурентов смешаны с не
+            уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности!
+            Прежде всего, внедрение современных методик не даёт нам иного выбора, кроме определения своевременного
+            выполнения сверхзадачи.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="background-gray-10 mt-156">
+  <div class="container">
+    <div class="write-us">
+      <div class="write-us__box-img">
+        <picture><source srcset="img/write-us/1.webp" type="image/webp"><img src="img/write-us/1.jpg" alt="img"></picture>
+      </div>
+      
+      <div class="write-us__wrapper">
+        <div class="section-title padding-none">
+          <h2 class="section-title__text">У вас остались вопросы?<br>Напишите нам!</h2>
+        </div>
+        <form class="js-form">
+          <div class="form-type-1">
+            <p class="form-type-1__desc">Заполните форму ниже и мы свяжемся с вами для уточнения деталей заказа</p>
+            
+            <label class="input-type-1">
+              <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+
+            <label class="input-type-1">
+              <input class="input-type-1__input js-phone-mask required required-phone" type="text" placeholder="Телефон">
+              <span class="message-error">Это поле не может быть пустым</span>
+            </label>
+
+            <button class="btn-reset btn-submit-type-1 btn-order">
+              <span class="text">Отправить сообщение</span>
+            </button>
+
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <section class="mailing mt-156">
+  <div class="container">
+    <div class="mailing__wrapper">
+      <div class="mailing__left">
+        <h2 class="mailing__title">
+          Подписывайтесь на рассылку<br>Будьте в курсе акций и новинок
+        </h2>
+      </div>
+
+      <div class="mailing__right">
+        <form>
+          <div class="mailing-form">
+            <label class="mailing-intut">
+              <input class="mailing-intut__input" type="text" placeholder="Ваш электронный адрес">
+            </label>
+            <label class="checkbox-type-1">
+              <input class="checkbox-type-1__input" type="checkbox">
+              <span class="castom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                  <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <p class="checkbox-type-1__desc">
+                Нажимая кнопку «Подписаться» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+              </p>
+            </label>
+            <button class="mailing-submit btn-reset">
+              <span class="text">Подписаться</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top_wrapper">
+        
+        <div class="column">
+          <div class="logo-footer">
+  <a href="/" class="logo-footer__link">
+    <img src="img/logo/logo-footer.svg" alt="svg">
+  </a>
+  <p class="logo-footer__desc">Производство автомобильных чехлов<br>и аксессуаров с доставкой по всей России</p>
+</div>
+
+          <div class="footer__group-info">
+            <div class="box-info">
+              <span class="name">Адрес:</span>
+              <span class="text">Пункт самовывоза СДЭК<br>Иваново, ул. Спартака, д. 22</span>
+            </div>
+            <div class="box-info">
+              <span class="name">Телефон:</span>
+              <a href="tel:+7 904 055-52-02" class="phone">+7 904 055-52-02</a>
+            </div>
+            <div class="box-info">
+              <span class="name">Эл. адрес:</span>
+              <a href="mailto:info@dress4car.ru" class="mail">info@dress4car.ru</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каталог</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Акции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Новинки</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Каркасные авточехлы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Перетяжка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Шумоизоляция</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Автоаксессуары</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Меню</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Галерея</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Установка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Инструкции</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Вопрос-ответ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Оплата и доставка</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="link-footer-nav">
+                  <span class="text">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="column">
+          <div class="footer__group-order">
+            <button class="btn-transparent btn-reset js-open-modal" data-modal="modal-feedback">
+              <span class="text">Заказать звонок</span>
+            </button>
+
+            <div class="box-network">
+              <span class="name">Мы на связи:</span>
+              <ul class="network-list list-reset">
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/tg.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/vk.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/avito-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-network">
+                    <span class="svg">
+                      <img src="img/network/drive-w.svg" alt="svg">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom_wrapper">
+        <p>© 2026 dress4car. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div class="bottom-menu">
+  <div class="container">
+    <div class="bottom-menu__line">
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#calalogBottom"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Каталог
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="27" height="23" viewBox="0 0 27 23" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Избранное
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="count">2</span>
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#basket"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Корзина
+        </span>
+      </a>
+
+      <a href="#" class="link-main-group">
+        <span class="svg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <use xlink:href="img/sprite.svg#lk"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Личный кабинет
+        </span>
+      </a>
+
+    </div>
+  </div>
+</div>
+  <div class="modal" id="modal-feedback">
+  <div class="modal__body">
+    <button class="modal-feedback__close modal__close btn-reset js-close-modal">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <use xlink:href="img/sprite.svg#modalClose"></use>
+      </svg>
+    </button>
+
+    <div class="modal-feedback__window">
+      <form class="js-form">
+        <div class="form-type-1">
+          <h3 class="form-type-1__title">Запрос на подбор</h3>
+          <label class="input-type-1">
+            <input class="input-type-1__input required" type="text" placeholder="Ваше имя">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input js-phone-mask required required-phone" type="text" placeholder="Телефон">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="input-type-1">
+            <input class="input-type-1__input required required-mail" type="text" placeholder="Эл. адрес">
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <label class="textarea-type-1">
+            <textarea class="textarea-type-1__text" placeholder="Ваше сообщение"></textarea>
+            <span class="message-error">Это поле не может быть пустым</span>
+          </label>
+
+          <button class="btn-reset btn-submit-type-1 btn-order">
+            <span class="text">Отправить сообщение</span>
+          </button>
+
+          <label class="checkbox-type-1">
+            <input class="checkbox-type-1__input required-checkbox required" type="checkbox" checked>
+            <span class="castom">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path d="M9.69995 0.700012L3.39995 8.20001L0.699951 5.20001" stroke="#F60114" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <p class="checkbox-type-1__desc">
+              Нажимая кнопку «Рассчитать стоимость» вы даёте согласие с <a href="#">политикой обработки персональных данных</a>
+            </p>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.box-basket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 116px;
+  @media (max-width: 1200px) {
+    gap: 56px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__card-your-order {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (max-width: 1200px) {
+      position: static;
+      width:100%;
+    }
+  }
+  &__left {
+    padding-right: 324px;
+    @media (max-width: 1200px) {
+      padding-right: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: var(--black, #000);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @media (max-width: 1000px) {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__person {
+    width: 474px;
+    max-width: 100%;
+  }
+}

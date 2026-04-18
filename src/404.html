@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"404"})
+
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    <div class="error-page">
+      <div class="container">
+        <div class="error-page__contents">
+          <div class="error-page__box-img">
+            <img src="img/404/404.png" alt="404">
+          </div>
+          <div class="error-page__desc">
+            <p>Запрашиваемая страница не найдена или удалена. <br>Перейдите на <a href="#">главную страницу</a> или <a href="#">воспользуйтесь каталогом</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('html/boxs/mailing.html')
+  @@include('html/boxs/footer.html')
+  @@include('html/boxs/bottom-menu.html')
+  @@include('html/boxs/modals.html')
+</body>
+
+</html>

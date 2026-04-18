@@ -1,0 +1,21 @@
+.hero {
+  &__box-img {
+    position: relative;
+
+    .swiper-btn-type-1 {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translate(0, -50%);
+      &.--prev {
+        right: calc(100% + 8px);
+      }
+      &.--next {
+        left: calc(100% + 8px);
+      }
+      @media (max-width: 1300px) {
+        display: none;
+      }
+    }
+  }
+}

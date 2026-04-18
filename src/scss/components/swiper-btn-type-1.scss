@@ -1,0 +1,24 @@
+.swiper-btn-type-1 {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  border-radius: 16px;
+  border: 4px solid var(--white);
+  background: var(--gray-10, #F6F6F6);
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  @media (min-width: 1001px) {
+    &:focus-visible,&:hover {
+      background-color: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
+  }
+}
